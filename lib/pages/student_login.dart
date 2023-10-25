@@ -3,8 +3,8 @@ import 'package:flutter_application/utils/routes.dart';
 import 'package:flutter_application/widgets/themes.dart';
 
 // ignore: camel_case_types
-class logsigns extends StatelessWidget {
-  //const LoginPage({super.key});
+class student_login extends StatelessWidget {
+  const student_login({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class logsigns extends StatelessWidget {
             //),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, MyRoutes.homeRoute); // Navigate to home screen
+                Navigator.pushNamed(context, MyRoutes.studentSignupRoute); // Navigate to home screen
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: MyTheme.buttonColor, // Use the button color from theme
@@ -34,7 +34,7 @@ class logsigns extends StatelessWidget {
             //),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, MyRoutes.loginsRoute); // Navigate to home screen
+                Navigator.pushNamed(context, MyRoutes.studentDashboard); // Navigate to home screen
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: MyTheme.buttonColor, // Use the button color from theme

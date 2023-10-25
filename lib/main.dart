@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/pages/login_page.dart';
-import 'package:flutter_application/pages/logins.dart';
-import 'package:flutter_application/pages/studentinterface.dart';
+import 'package:flutter_application/pages/home_page.dart';
+import 'package:flutter_application/pages/student_signup.dart';
+import 'package:flutter_application/pages/student_login.dart';
+import 'package:flutter_application/pages/student_dashboard.dart';
 import 'package:flutter_application/utils/routes.dart';
 import 'package:flutter_application/widgets/themes.dart';
-import 'package:flutter_application/pages/logsigns.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -22,13 +20,12 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.loginRoute,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
-        MyRoutes.loginRoute: (context) => const LoginPage(),
-      // MyRoutes.homeRoute: (context) => homepage(),
-        MyRoutes.logsignsRoute: (context) => logsigns(),
-          MyRoutes.studentinterfaceRoute: (context) => studentinterface(),
-           MyRoutes.loginsRoute: (context) => logins(),
+        MyRoutes.homeRoute: (context) => const HomePage(),
+        MyRoutes.studentLoginRoute: (context) => const student_login(),
+        MyRoutes.studentDashboard: (context) => const StudentDashboard(),
+        MyRoutes.studentSignupRoute: (context) => const StudentSignup(),
       },
     );
   }

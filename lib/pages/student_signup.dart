@@ -1,15 +1,15 @@
-// ignore_for_file: unnecessary_string_escapes, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application/utils/routes.dart';
-import 'package:flutter_application/pages/studentinterface.dart';
+// import 'package:flutter_application/pages/studentinterface.dart';
 
-class logins extends StatefulWidget {
+class StudentSignup extends StatefulWidget {
+  const StudentSignup({super.key});
+
   @override
-  State<logins> createState() => _loginState();
+  State<StudentSignup> createState() => _StudentSignuptate();
 }
 
-class _loginState extends State<logins> {
+class _StudentSignuptate extends State<StudentSignup> {
   String name = "";
   bool changebutton = false;
   final _formkey = GlobalKey<FormState>();
@@ -18,10 +18,10 @@ class _loginState extends State<logins> {
       setState(() {
         changebutton = true;
       });
-      await Future.delayed(Duration(seconds: 1));
-      await Navigator.pushNamed(context, MyRoutes.studentinterfaceRoute);
+      await Future.delayed(const Duration(seconds: 1));
+      await Navigator.pushNamed(context, MyRoutes.studentDashboard);
       setState(() {
-        changebutton = false;
+        var bool = changebutton = false;
       });
     }
   }
@@ -39,25 +39,25 @@ class _loginState extends State<logins> {
                // "assets/images/login.png",
                // fit: BoxFit.cover,
               //),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 "Welcome $name",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Column(children: [
                 TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Enter username",
                     labelText: "username",
                   ),
                   validator: (value) {
                     if (value?.isEmpty ?? true) {
-                      return "username cana=not be empty";
+                      return "username can not be empty";
                     }
                     return null;
                   },
@@ -66,12 +66,12 @@ class _loginState extends State<logins> {
                     setState(() {});
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
                   obscureText: true,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: "Enter password",
                     labelText: "password",
                   ),
@@ -84,7 +84,7 @@ class _loginState extends State<logins> {
                     return null;
                   },
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Material(
@@ -93,20 +93,20 @@ class _loginState extends State<logins> {
                   child: InkWell(
                     onTap: () => moveToHome(context),
                     child: AnimatedContainer(
-                      duration: Duration(seconds: 1),
+                      duration: const Duration(seconds: 1),
                       width: changebutton ? 50 : 150,
                       height: 50,
                       alignment: Alignment.center,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.deepPurple,
                         // shape: changebutton?BoxShape.circle:BoxShape.rectangle,
                       ),
                       child: changebutton
-                          ? Icon(
+                          ? const Icon(
                               Icons.done,
                               color: Colors.amber,
                             )
-                          : Text(
+                          : const Text(
                               "Login",
                               style: TextStyle(
                                   color: Colors.amber,
