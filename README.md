@@ -1,6 +1,6 @@
-# flutter_application
-
-A new Flutter project.
+# App based audiometer
+To create an app based audiometer. 
+This app helps to know the hearing loss.
 
 ## Getting Started
 
