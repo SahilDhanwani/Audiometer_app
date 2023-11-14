@@ -6,10 +6,10 @@ class StudentSignup extends StatefulWidget {
   const StudentSignup({super.key});
 
   @override
-  State<StudentSignup> createState() => _StudentSignuptate();
+  State<StudentSignup> createState() => _StudentSignupState();
 }
 
-class _StudentSignuptate extends State<StudentSignup> {
+class _StudentSignupState extends State<StudentSignup> {
   String name = "";
   bool changebutton = false;
   final _formkey = GlobalKey<FormState>();
@@ -18,10 +18,11 @@ class _StudentSignuptate extends State<StudentSignup> {
       setState(() {
         changebutton = true;
       });
-      await Future.delayed(const Duration(seconds: 1));
+     await Future.delayed(const Duration(seconds: 1));
+      // ignore: use_build_context_synchronously
       await Navigator.pushNamed(context, MyRoutes.studentDashboard);
       setState(() {
-        var bool = changebutton = false;
+        changebutton = false;
       });
     }
   }
