@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/utils/routes.dart';
+// import 'package:flutter_application/pages/logsigns.dart';
 import 'package:flutter_application/widgets/themes.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +21,12 @@ class LoginPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, MyRoutes.homeRoute); // Navigate to home screen
+                Navigator.pushNamed(
+                    context, MyRoutes.homeRoute); // Navigate to home screen
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: MyTheme.buttonColor, // Use the button color from theme
+                backgroundColor:
+                    MyTheme.buttonColor, // Use the button color from theme
               ),
               child: const Text('Admin'),
             ),
@@ -33,10 +37,12 @@ class LoginPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, MyRoutes.homeRoute); // Navigate to home screen
+                Navigator.pushNamed(
+                    context, MyRoutes.studentLoginRoute); // Navigate to home screen
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: MyTheme.buttonColor, // Use the button color from theme
+                backgroundColor:
+                    MyTheme.buttonColor, // Use the button color from theme
               ),
               child: const Text('Student'),
             ),
