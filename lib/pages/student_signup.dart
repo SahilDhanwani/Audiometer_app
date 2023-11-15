@@ -21,7 +21,7 @@ class _StudentSignuptate extends State<StudentSignup> {
       await Future.delayed(const Duration(seconds: 1));
       await Navigator.pushNamed(context, MyRoutes.studentDashboard);
       setState(() {
-        var bool = changebutton = false;
+        // var bool = changebutton = false;
       });
     }
   }
